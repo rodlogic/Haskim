@@ -28,6 +28,9 @@ rm ${PREFIX}/.haskim.vimrc.bundles.local
 echo "Getting ghc-mod from hackage"
 cabal install ghc-mod
 
+echo "Getting hdevtools from hackage"
+cabal install ghc-mod
+
 echo "Installing spf13-vim"
 curl http://j.mp/spf13-vim3 -L -o - | sh
 
@@ -51,6 +54,13 @@ if test -z ${GHC_MOD_LOC}
 then
     echo "WARNING: Could not find ghc-mod binary in PATH"
     echo "For a proper working of ghcmod-vim add the binary to your PATH"
+fi
+
+HDEVTOOLS_LOC=`which hdevtools`
+if test -z ${HDEVTOOLS_LOC}
+then
+    echo "WARNING: Could not find hdevtools binary in PATH"
+    echo "For a proper working of vim-hdevtools/syntatic add the binary to your PATH"
 fi
 
 echo "All done! Enjoy Haskim!"

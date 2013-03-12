@@ -11,7 +11,7 @@ Note: the spf13-vim install script will backup your existing `.vimrc`. You shoul
 Installation on any OS with bash or sh should be as easy as executing the following line:
 
 ```bash
-curl https://raw.github.com/jejansse/Haskim/master/bootstrap.sh -L -o - | sh
+curl https://raw.github.com/rodlogic/Haskim/master/bootstrap.sh -L -o - | sh
 ```
 
 At a certain point in the installation you will see an empty VIM window. Just type :q! followed by a carriage return and the installation should proceed.

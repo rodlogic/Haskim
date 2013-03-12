@@ -4,7 +4,7 @@ PREFIX="${HOME}"
 cd $PREFIX
 
 echo "Getting custom .vimrc.local"
-curl https://github.com/rodlogic/Haskim/blob/master/.vimrc.local -L -o - >> ${PREFIX}/.haskim.vimrc.local
+curl https://raw.github.com/rodlogic/Haskim/master/.vimrc.local -L -o - >> ${PREFIX}/.haskim.vimrc.local
 if [ -e ${PREFIX}/.vimrc.local ]
 then
     echo "Custom .vimrc.local found; adding missing lines"
@@ -15,7 +15,7 @@ fi
 rm ${PREFIX}/.haskim.vimrc.local
 
 echo "Getting custom .vimrc.bundles.local"
-curl https://github.com/rodlogic/Haskim/blob/master/.vimrc.bundles.local -L -o - >> ${PREFIX}/.haskim.vimrc.bundles.local
+curl https://raw.github.com/rodlogic/Haskim/master/.vimrc.bundles.local -L -o - >> ${PREFIX}/.haskim.vimrc.bundles.local
 if [ -e ${PREFIX}/.vimrc.bundles.local ]
 then
     echo "Custom .vimrc.bundles.local found; adding missing lines"
